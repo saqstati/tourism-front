@@ -34,7 +34,7 @@ import { HeaderComponent } from './header/header.component';
 import { headerForMain } from './headeForLanding/headerForMain.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { AngularEmojisModule } from 'angular-emojis';
+// import { AngularEmojisModule } from 'angular-emojis';
 import { DataRangePickerComponent } from './data-range-picker/data-range-picker.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -101,7 +101,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FormsModule,
     MatSliderModule,
     BrowserAnimationsModule,
-    AngularEmojisModule,
+    // AngularEmojisModule,
     Ng2SearchPipeModule,
     MatIconModule,
     MatRadioModule,

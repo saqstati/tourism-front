@@ -805,8 +805,8 @@ export class InteractiveMapComponent implements OnInit, OnDestroy {
           this.selectedVType +
           '&year=' +
           this.selectedYear +
-          '&month=' +
-          this.selectedMonth +
+          // '&month=' +
+          // this.selectedMonth +
           '&gender=' +
           this.selectedGender +
           '&age=' +
