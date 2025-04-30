@@ -297,10 +297,10 @@ export class SeasonalComponent implements OnInit, OnDestroy {
     let yAxis = chart.yAxes.push(new am4charts.CategoryAxis());
     xAxis.renderer.opposite = true;
 
-    xAxis.dataFields.category = 'monthName';
-    if (this.tType == 3) {
+    // xAxis.dataFields.category = 'monthName';
+    // if (this.tType == 3) {
       xAxis.dataFields.category = 'quarterName';
-    }
+    // }
     yAxis.dataFields.category = 'yearNo';
 
     xAxis.renderer.grid.template.disabled = true;
@@ -313,11 +313,11 @@ export class SeasonalComponent implements OnInit, OnDestroy {
 
     let series = chart.series.push(new am4charts.ColumnSeries());
 
-    series.dataFields.categoryX = 'monthName';
+    // series.dataFields.categoryX = 'monthName';
 
-    if (this.tType == 3) {
+    // if (this.tType == 3) {
       series.dataFields.categoryX = 'quarterName';
-    }
+    // }
     series.dataFields.categoryY = 'yearNo';
 
     let field = 'visits';

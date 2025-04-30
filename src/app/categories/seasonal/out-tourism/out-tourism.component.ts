@@ -30,14 +30,28 @@ export class OutTourismComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getSeasonalQuery().subscribe((arg) => {
-      this.createChart(arg);
-      this.Data = arg;
-      // for (let entry of this.Data) {
-      //   console.log("dadadada",entry);
-      // }
-      console.log(this.Data);
-    });
+    this.createChart('');
+
+    this.getSeasonalQuery()
+      .pipe(
+        map((res) => {
+          return res.map(
+            (res: { yearNo: any; quarterNo: any; value: any }) => ({
+              quarterNo: res.quarterNo,
+              value: res.value | 1,
+              yearNo: res.yearNo,
+            })
+          );
+        })
+      )
+      .subscribe((arg) => {
+        this.createChart(arg);
+        this.Data = arg;
+        // for (let entry of this.Data) {
+        //   console.log("dadadada",entry);
+        // }
+        console.log(this.Data);
+      });
     // this.getSeasonalQuery().subscribe((arg) => {
     //   this.createChart(arg);
     // });
@@ -107,13 +121,46 @@ export class OutTourismComponent implements OnInit {
   // change functions
   selectTourType() {
     this.tourType = this.tourTypeSelect;
-    this.getSeasonalQuery().subscribe((arg) => {
-      this.Data = arg;
-      console.log(this.Data);
-    });
-    this.getSeasonalQuery().subscribe((arg) => {
-      this.createChart(arg);
-    });
+    this.getSeasonalQuery()
+      .pipe(
+        map((res) => {
+          return res.map(
+            (res: { yearNo: any; quarterNo: any; value: any }) => ({
+              quarterNo: res.quarterNo,
+              value: res.value | 1,
+              yearNo: res.yearNo,
+            })
+          );
+        })
+      )
+      .subscribe((arg) => {
+        this.createChart(arg);
+        this.Data = arg;
+        // for (let entry of this.Data) {
+        //   console.log("dadadada",entry);
+        // }
+        console.log(this.Data);
+      });
+    this.getSeasonalQuery()
+      .pipe(
+        map((res) => {
+          return res.map(
+            (res: { yearNo: any; quarterNo: any; value: any }) => ({
+              quarterNo: res.quarterNo,
+              value: res.value | 1,
+              yearNo: res.yearNo,
+            })
+          );
+        })
+      )
+      .subscribe((arg) => {
+        this.createChart(arg);
+        this.Data = arg;
+        // for (let entry of this.Data) {
+        //   console.log("dadadada",entry);
+        // }
+        console.log(this.Data);
+      });
   }
 
   selectYearChange() {
@@ -121,47 +168,180 @@ export class OutTourismComponent implements OnInit {
       this.yearSelect,
       this.yearsOptions
     )[0].value;
-    this.getSeasonalQuery().subscribe((arg) => {
-      this.Data = arg;
-      console.log(this.Data);
-    });
-    this.getSeasonalQuery().subscribe((arg) => {
-      this.createChart(arg);
-    });
+    this.getSeasonalQuery()
+      .pipe(
+        map((res) => {
+          return res.map(
+            (res: { yearNo: any; quarterNo: any; value: any }) => ({
+              quarterNo: res.quarterNo,
+              value: res.value | 1,
+              yearNo: res.yearNo,
+            })
+          );
+        })
+      )
+      .subscribe((arg) => {
+        this.createChart(arg);
+        this.Data = arg;
+        // for (let entry of this.Data) {
+        //   console.log("dadadada",entry);
+        // }
+        console.log(this.Data);
+      });
+    this.getSeasonalQuery()
+      .pipe(
+        map((res) => {
+          return res.map(
+            (res: { yearNo: any; quarterNo: any; value: any }) => ({
+              quarterNo: res.quarterNo,
+              value: res.value | 1,
+              yearNo: res.yearNo,
+            })
+          );
+        })
+      )
+      .subscribe((arg) => {
+        this.createChart(arg);
+        this.Data = arg;
+        // for (let entry of this.Data) {
+        //   console.log("dadadada",entry);
+        // }
+        console.log(this.Data);
+      });
   }
 
   selectQuarterChange() {
     this.selectedQuarter = this.quarterSelect;
-    this.getSeasonalQuery().subscribe((arg) => {
-      this.Data = arg;
-      console.log(this.Data);
-    });
-    this.getSeasonalQuery().subscribe((arg) => {
-      this.createChart(arg);
-    });
+    this.getSeasonalQuery()
+      .pipe(
+        map((res) => {
+          return res.map(
+            (res: { yearNo: any; quarterNo: any; value: any }) => ({
+              quarterNo: res.quarterNo,
+              value: res.value | 1,
+              yearNo: res.yearNo,
+            })
+          );
+        })
+      )
+      .subscribe((arg) => {
+        this.createChart(arg);
+        this.Data = arg;
+        // for (let entry of this.Data) {
+        //   console.log("dadadada",entry);
+        // }
+        console.log(this.Data);
+      });
+    this.getSeasonalQuery()
+      .pipe(
+        map((res) => {
+          return res.map(
+            (res: { yearNo: any; quarterNo: any; value: any }) => ({
+              quarterNo: res.quarterNo,
+              value: res.value | 1,
+              yearNo: res.yearNo,
+            })
+          );
+        })
+      )
+      .subscribe((arg) => {
+        this.createChart(arg);
+        this.Data = arg;
+        // for (let entry of this.Data) {
+        //   console.log("dadadada",entry);
+        // }
+        console.log(this.Data);
+      });
   }
 
   selectAgeChange() {
     this.selectedAge = this.ageSelect;
-    this.getSeasonalQuery().subscribe((arg) => {
-      this.Data = arg;
-      console.log(this.Data);
-    });
-    this.getSeasonalQuery().subscribe((arg) => {
-      this.createChart(arg);
-    });
+    this.getSeasonalQuery()
+      .pipe(
+        map((res) => {
+          return res.map(
+            (res: { yearNo: any; quarterNo: any; value: any }) => ({
+              quarterNo: res.quarterNo,
+              value: res.value | 1,
+              yearNo: res.yearNo,
+            })
+          );
+        })
+      )
+      .subscribe((arg) => {
+        this.createChart(arg);
+        this.Data = arg;
+        // for (let entry of this.Data) {
+        //   console.log("dadadada",entry);
+        // }
+        console.log(this.Data);
+      });
+    this.getSeasonalQuery()
+      .pipe(
+        map((res) => {
+          return res.map(
+            (res: { yearNo: any; quarterNo: any; value: any }) => ({
+              quarterNo: res.quarterNo,
+              value: res.value | 1,
+              yearNo: res.yearNo,
+            })
+          );
+        })
+      )
+      .subscribe((arg) => {
+        this.createChart(arg);
+        this.Data = arg;
+        // for (let entry of this.Data) {
+        //   console.log("dadadada",entry);
+        // }
+        console.log(this.Data);
+      });
   }
 
   selectGenderChange() {
     this.selectedGender = this.genderSelect;
-    this.getSeasonalQuery().subscribe((arg) => {
-      this.Data = arg;
-      console.log(this.Data);
-    });
-    this.getSeasonalQuery().subscribe((arg) => {
-      this.createChart(arg);
-    });
+    this.getSeasonalQuery()
+      .pipe(
+        map((res) => {
+          return res.map(
+            (res: { yearNo: any; quarterNo: any; value: any }) => ({
+              quarterNo: res.quarterNo,
+              value: res.value | 1,
+              yearNo: res.yearNo,
+            })
+          );
+        })
+      )
+      .subscribe((arg) => {
+        this.createChart(arg);
+        this.Data = arg;
+        // for (let entry of this.Data) {
+        //   console.log("dadadada",entry);
+        // }
+        console.log(this.Data);
+      });
+    this.getSeasonalQuery()
+      .pipe(
+        map((res) => {
+          return res.map(
+            (res: { yearNo: any; quarterNo: any; value: any }) => ({
+              quarterNo: res.quarterNo,
+              value: res.value | 1,
+              yearNo: res.yearNo,
+            })
+          );
+        })
+      )
+      .subscribe((arg) => {
+        this.createChart(arg);
+        this.Data = arg;
+        // for (let entry of this.Data) {
+        //   console.log("dadadada",entry);
+        // }
+        console.log(this.Data);
+      });
   }
+
 
   //http calls
   getGenders() {
@@ -205,7 +385,7 @@ export class OutTourismComponent implements OnInit {
     let yAxis = chart.yAxes.push(new am4charts.CategoryAxis());
 
     xAxis.dataFields.category = 'yearNo';
-    yAxis.dataFields.category = 'monthNo';
+    yAxis.dataFields.category = 'quarterNo';
 
     xAxis.renderer.grid.template.disabled = true;
     xAxis.renderer.minGridDistance = 40;
@@ -216,7 +396,7 @@ export class OutTourismComponent implements OnInit {
 
     let series = chart.series.push(new am4charts.ColumnSeries());
     series.dataFields.categoryX = 'yearNo';
-    series.dataFields.categoryY = 'monthNo';
+    series.dataFields.categoryY = 'quarterNo';
     series.dataFields.value = 'value';
     series.sequencedInterpolation = true;
     series.defaultState.transitionDuration = 3000;
@@ -228,7 +408,7 @@ export class OutTourismComponent implements OnInit {
     columnTemplate.strokeOpacity = 0.6;
     columnTemplate.stroke = bgColor;
     columnTemplate.tooltipText =
-      'წელი - {yearNo}, თვე - {monthNo}, რაოდენობა - {value}';
+      'წელი - {yearNo}, კვარტალი - {quarterNo}, რაოდენობა - {value} ';
     columnTemplate.width = am4core.percent(100);
     columnTemplate.height = am4core.percent(100);
 
