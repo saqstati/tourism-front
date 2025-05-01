@@ -31,8 +31,14 @@
           </option>
         </select>
 
-        <select class="form-select mt-3 sel" [(ngModel)]="startM.value">
+        <!-- <select class="form-select mt-3 sel" [(ngModel)]="startM.value">
           <option *ngFor="let data of monthies" value="{{ data.value }}">
+            {{ data.name }}
+          </option>
+        </select> -->
+        <!-- Start Quarter -->
+        <select class="form-select mt-3 sel" [(ngModel)]="startQ.value" (change)="changedenger()"> <!-- Use startQ.value -->
+          <option *ngFor="let data of quarters" [value]="data.value">
             {{ data.name }}
           </option>
         </select>
@@ -44,8 +50,14 @@
             {{ data }}
           </option>
         </select>
-        <select class="form-select mt-3 sel" [(ngModel)]="endM.value">
+        <!-- <select class="form-select mt-3 sel" [(ngModel)]="endM.value">
           <option *ngFor="let data of monthiesEnd" value="{{ data.value }}">
+            {{ data.name }}
+          </option>
+        </select> -->
+        <!-- End Quarter -->
+        <select class="form-select mt-3 sel" [(ngModel)]="endQ.value" (change)="changedenger()"> <!-- Use endQ.value -->
+          <option *ngFor="let data of quartersEnd" [value]="data.value">
             {{ data.name }}
           </option>
         </select>
@@ -58,9 +70,8 @@
             name="inlineRadioOptions"
             id="inlineRadio1"
             value="option1"
-            [checked]="true"
+            [checked]="tType === 1" 
             (change)="changeFlag(1)"
-            (click)="GetYears(1)"
           />
           <label class="form-check-label" for="inlineRadio1">{{
             "border.forign" | translate
@@ -75,7 +86,6 @@
             id="inlineRadio2"
             value="option2"
             (change)="changeFlag(2)"
-            (click)="GetYears(2)"
           />
           <label class="form-check-label" for="inlineRadio2">{{
             "border.exit" | translate
@@ -84,7 +94,12 @@
         <button type="button" class="compareBTN" (click)="getChart()">
           {{ "border.compare" | translate }}
         </button>
-
+        <!-- Loading Indicator -->
+        <div *ngIf="isLoading" class="text-center mt-3">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+       </div>
         <div
           class="alert alert-warning alert-dismissible fade show"
           role="alert"
