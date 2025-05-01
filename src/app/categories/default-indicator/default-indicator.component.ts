@@ -23,8 +23,7 @@ export class DefaultIndicatorComponent implements OnInit, OnDestroy {
     this.GetVisitTypes();
     this.GetTourismTypes();
 
-    // this.periods = this.srvc.getPeriods();
-    this.periods = this.srvc.getPeriods_new();
+    this.periods = this.srvc.getPeriods();
     this.indicators = this.srvc.getIndicators();
     this.isAvarige = false;
     this.lang = localStorage.getItem('Language');

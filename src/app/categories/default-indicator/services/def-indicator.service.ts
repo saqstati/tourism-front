@@ -30,31 +30,11 @@ export class DefIndicatorService implements OnInit {
     { name: 'Monthly', value: 3, isDisabled: false },
   ];
 
-  periods_new: IDropDown[] = [
-    { name: 'წლიური', value: 1, isDisabled: false },
-    { name: 'კვარტალური', value: 2, isDisabled: false },
-    // { name: 'ყოველთვიური', value: 3, isDisabled: false },
-  ];
-
-  periodsEN_new: IDropDown[] = [
-    { name: 'Annual', value: 1, isDisabled: false },
-    { name: 'Quarterly', value: 2, isDisabled: false },
-    // { name: 'Monthly', value: 3, isDisabled: false },
-  ];
-
   getPeriods() {
     if (this.lang == 'ENG') {
       return this.periodsEN;
     } else {
       return this.periods;
-    }
-  }
-
-  getPeriods_new() {
-    if (this.lang == 'ENG') {
-      return this.periodsEN_new;
-    } else {
-      return this.periods_new;
     }
   }
 
