@@ -25,6 +25,12 @@ export class BorderService {
     );
   }
 
+  GetQuarters() {
+    return this.http.get<any>(
+      this.SharedUrl + '/getNamesWithID?entity=Quarters&lang=' + this.lang
+    );
+  }
+
   GetYearsAll() {
     return this.http.get<any>(this.APIUrl + '/years');
   }
