@@ -117,10 +117,10 @@ export class Top15Component implements OnInit, OnDestroy {
     if (lang && lang.toLowerCase() === "geo")
       { // Georgian Example
              switch(quarterNum) {
-                 case 1: return "I კვ.";
-                 case 2: return "II კვ.";
-                 case 3: return "III კვ.";
-                 case 4: return "IV კვ.";
+                 case 1: return "I კვ";
+                 case 2: return "II კვ";
+                 case 3: return "III კვ";
+                 case 4: return "IV კვ";
                  default: return "?";
              }
         } else { // Default to English-like

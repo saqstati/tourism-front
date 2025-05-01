@@ -28,8 +28,13 @@
           </option>
         </select>
 
-        <select class="form-select mt-3 sel" [(ngModel)]="startM.value">
+        <!-- <select class="form-select mt-3 sel" [(ngModel)]="startM.value">
           <option *ngFor="let data of monthies" value="{{ data.value }}">
+            {{ data.name }}
+          </option>
+        </select> -->
+        <select class="form-select mt-3 sel" [(ngModel)]="startQ.value" (change)="changedenger()"> <!-- Use startQ.value -->
+          <option *ngFor="let data of quarters" [value]="data.value"> <!-- Use property binding -->
             {{ data.name }}
           </option>
         </select>
@@ -43,8 +48,13 @@
           </option>
         </select>
 
-        <select class="form-select mt-3 sel" [(ngModel)]="endM.value">
+        <!-- <select class="form-select mt-3 sel" [(ngModel)]="endM.value">
           <option *ngFor="let data of monthiesEnd" value="{{ data.value }}">
+            {{ data.name }}
+          </option>
+        </select> -->
+        <select class="form-select mt-3 sel" [(ngModel)]="endQ.value" (change)="changedenger()"> <!-- Use endQ.value -->
+          <option *ngFor="let data of quartersEnd" [value]="data.value"> <!-- Use property binding -->
             {{ data.name }}
           </option>
         </select>
@@ -86,9 +96,16 @@
         ></button>
       </div>
 
-      <div class="col-sm-12 col-lg-8 ml-5 mt-2 chartDiv">
-        <div class="chart" id="visitsChart" style="min-height: 100%"></div>
-      </div>
+      <!-- Chart Column -->
+      <div class="col-sm-12 col-lg-8 ml-lg-5 mt-2 chartDiv"> <!-- Adjusted margin for larger screens -->
+        <div class="chart" id="visitsChart" style="min-height: 100%">
+          <!-- Chart will be rendered here -->
+          <!-- Consider adding a placeholder or message when no chart is loaded -->
+           <div *ngIf="!isLoading && !chartInstance" class="text-center text-muted pt-5">
+             Select parameters and click 'Show' to display the chart.
+           </div>
+        </div>
+      </div><!-- End Chart Column -->
     </div>
   </div>
 </div>
