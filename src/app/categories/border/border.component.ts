@@ -424,15 +424,12 @@ export class BorderComponent implements OnInit, OnDestroy {
     }
     chart.legend.useDefaultMarker = true;
 
-
-    // --- Cursor and Scrollbar ---
     chart.cursor = new am4charts.XYCursor();
     chart.cursor.lineX.strokeOpacity = 0;
     chart.cursor.lineY.strokeOpacity = 0;
     chart.cursor.behavior = "none"; 
     let scrollbarX = new am4core.Scrollbar();
-    chart.scrollbarX = scrollbarX;
-    
+    chart.scrollbarX = scrollbarX;    
 
     // --- Exporting ---
     chart.logo.disabled = true;
