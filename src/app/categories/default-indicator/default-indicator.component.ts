@@ -138,28 +138,28 @@ export class DefaultIndicatorComponent implements OnInit, OnDestroy {
       this.tTypes.filter((x) => x.value == 3)[0].isDisabled = true;
     }
 
-    if ([1, 4, 5, 9, 10, 11, 12].includes(Number(this.indicator))) {
-      this.periods.filter((x) => x.value == 3)[0].isDisabled = true;
-    }
+    // if ([1, 4, 5, 9, 10, 11, 12].includes(Number(this.indicator))) {
+    //   this.periods.filter((x) => x.value == 3)[0].isDisabled = true;
+    // }
 
-    if (Number(this.period) == 3) {
-      this.tTypes.filter((x) => x.value == 3)[0].isDisabled = true;
+    // if (Number(this.period) == 3) {
+    //   this.tTypes.filter((x) => x.value == 3)[0].isDisabled = true;
 
-      this.indicators.forEach((x) => {
-        if ([1, 4, 5, 9, 10, 11, 12].includes(x.value)) {
-          x.isDisabled = true;
-        }
-      });
-    }
+    //   this.indicators.forEach((x) => {
+    //     if ([1, 4, 5, 9, 10, 11, 12].includes(x.value)) {
+    //       x.isDisabled = true;
+    //     }
+    //   });
+    // }
 
-    if (Number(this.tType) != 2) {
-      this.indicators.filter((x) => x.value == 12)[0].isDisabled = true;
-    }
+    // if (Number(this.tType) != 2) {
+    //   this.indicators.filter((x) => x.value == 12)[0].isDisabled = true;
+    // }
 
-    if (Number(this.tType) == 3) {
-      this.periods.filter((x) => x.value == 3)[0].isDisabled = true;
-      this.indicators.filter((x) => x.value == 11)[0].isDisabled = true;
-    }
+    // if (Number(this.tType) == 3) {
+    //   this.periods.filter((x) => x.value == 3)[0].isDisabled = true;
+    //   this.indicators.filter((x) => x.value == 11)[0].isDisabled = true;
+    // }
   }
 
   titleForCostsChart: string = '';
